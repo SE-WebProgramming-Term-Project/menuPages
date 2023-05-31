@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import Pagination from "./MenuPazination";
 import '../css/Menu.css'
@@ -19,7 +18,7 @@ function Posts() {
       "tag" : "#전주불백피자 #목동피자",
       "large": "100",
       "reguler" : "1",
-      "update": "2000-01-01", 
+      "update": "2000-01-01",
       "category" : "장인피자",
       "metarial" : ["새우", "치즈", "닭고기"]
     },  {
@@ -30,10 +29,10 @@ function Posts() {
       "tag" : "#전주불백피자 #목동피자",
       "large": "300",
       "reguler" : "2",
-      "update": "2000-01-02", 
+      "update": "2000-01-02",
       "category" : "장인피자",
       "metarial" : ["새우", "치즈", "닭고기"]
-      
+
     },  {
       "userId": 1,
       "id": 3,
@@ -42,7 +41,7 @@ function Posts() {
       "tag" : "#전주불백피자 #목동피자",
       "large": "200",
       "reguler" : "3",
-      "update": "2000-01-03", 
+      "update": "2000-01-03",
       "category" : "달인피자",
       "metarial" : ["새우", "치즈", "닭고기"]
     },  {
@@ -53,7 +52,7 @@ function Posts() {
       "tag" : "#전주불백피자 #목동피자",
       "large": "500",
       "reguler" : "4",
-      "update": "2000-01-04", 
+      "update": "2000-01-04",
       "category" : "달인피자",
       "metarial" : ["새우", "치즈", "닭고기"]
     },  {
@@ -64,7 +63,7 @@ function Posts() {
       "tag" : "#전주불백피자 #목동피자",
       "large": "400",
       "reguler" : "5",
-      "update": "2000-01-05", 
+      "update": "2000-01-05",
       "category" : "달인피자",
       "metarial" : ["새우", "치즈", "닭고기"]
     },  {
@@ -75,7 +74,7 @@ function Posts() {
       "tag" : "#전주불백피자 #목동피자",
       "large": "700",
       "reguler" : "6",
-      "update": "2000-01-06", 
+      "update": "2000-01-06",
       "category" : "명품피자",
       "metarial" : ["새우", "치즈", "닭고기"]
     },  {
@@ -86,10 +85,10 @@ function Posts() {
       "tag" : "#전주불백피자 #목동피자",
       "large": "600",
       "reguler" : "7",
-      "update": "2000-01-07", 
+      "update": "2000-01-07",
       "category" : "명품피자",
       "metarial" : ["새우", "치즈", "닭고기"]
-      
+
     },  {
       "userId": 1,
       "id": 8,
@@ -98,14 +97,14 @@ function Posts() {
       "tag" : "#전주불백피자 #목동피자",
       "large": "800",
       "reguler" : "8",
-      "update": "2000-01-08", 
+      "update": "2000-01-08",
       "category" : "명품피자",
       "metarial" : ["새우", "치즈", "닭고기"]
     }
   ]
   useEffect(() => {
     let sortedPosts = [...data];
-  
+
     if (kategorie === 1) {
       // Sort the posts based on the update field in descending order
       sortedPosts = sortedPosts.sort((a, b) => {
@@ -123,7 +122,7 @@ function Posts() {
       sortedPosts = sortedPosts.sort((a, b) => {
         return parseInt(b.large)- parseInt(a.large);
       });
-      
+
     }
     setLimit(limit);
     setPosts(sortedPosts);
@@ -152,12 +151,12 @@ function Posts() {
     setSelectedCategory(category);
   };
   //필터링 된 페이지 수 
-  useEffect(() => { 
+  useEffect(() => {
     let filteredPosts = [...data];
 
     if (selectedCategory !== "전체") {
       filteredPosts = filteredPosts.filter(
-        (post) => post.category === selectedCategory
+          (post) => post.category === selectedCategory
       );
     }
 
@@ -166,183 +165,112 @@ function Posts() {
   }, [selectedCategory]);
 
   return (
-    <div className="Layout">
-      <header>
-      </header>
+      <div className="Layout">
+        <header>
+        </header>
 
-      <main>
-        <div className="container">
-          <div class="pc-pizzamenu-top-text">
-            <p class="pizzamenu-top-text-body2">피자</p>
-             <p class="pizzamenu-top-text-footer">
-              맛있고 건강한 피자! 피자알볼로의
-              <font color="#41b6e6">다양한 피자를 주문</font>해 보세요.
-            </p>
-          </div>
-          <table className="kategorie_bar">
-            <tbody>
+        <main>
+          <div className="container">
+            <div class="pc-pizzamenu-top-text">
+              <p class="pizzamenu-top-text-body2">피자</p>
+              <p class="pizzamenu-top-text-footer">
+                맛있고 건강한 피자! 피자알볼로의
+                <font color="#41b6e6">다양한 피자를 주문</font>해 보세요.
+              </p>
+            </div>
+            <table className="kategorie_bar">
+              <tbody>
               <tr>
                 <td
-                  className={selectedCategory === "전체" ? "selected" : ""}
-                  onClick={() => handleCategoryClick("전체")}
+                    className={selectedCategory === "전체" ? "selected" : ""}
+                    onClick={() => handleCategoryClick("전체")}
                 >
                   전체
                 </td>
                 <td
-                  className={selectedCategory === "장인피자" ? "selected" : ""}
-                  onClick={() => handleCategoryClick("장인피자")}
+                    className={selectedCategory === "장인피자" ? "selected" : ""}
+                    onClick={() => handleCategoryClick("장인피자")}
                 >
                   장인피자
                 </td>
                 <td
-                  className={selectedCategory === "달인피자" ? "selected" : ""}
-                  onClick={() => handleCategoryClick("달인피자")}
+                    className={selectedCategory === "달인피자" ? "selected" : ""}
+                    onClick={() => handleCategoryClick("달인피자")}
                 >
                   달인피자
                 </td>
                 <td
-                  className={selectedCategory === "명품피자" ? "selected" : ""}
-                  onClick={() => handleCategoryClick("명품피자")}
+                    className={selectedCategory === "명품피자" ? "selected" : ""}
+                    onClick={() => handleCategoryClick("명품피자")}
                 >
                   명품피자
                 </td>
               </tr>
-            </tbody>
-          </table>
-          <label>
-            <select
-              type="number"
-              value={kategorie}
-              onChange={(event) => {
-                if (selectedCategory === "전체") {
-                  setKategorie(Number(event.target.value));
-                }
-              }}
-              disabled={selectedCategory !== "전체"}
-            >
-              <option value="1">신제품순</option>
-              <option value="2">가격낮은순</option>
-              <option value="3">가격높은순</option>
-            </select>
-          </label>
-          {posts
-            .filter((post) =>
-              selectedCategory === "전체"
-                ? true
-                : post.category === selectedCategory
-            )
-            .slice(offset, offset + limit)
-            .map(({ id, img, title, tag, large, update, category, reguler,metarial }) => (
-              <div className="pizzaMenu" key={id}>
-                <img src={img}></img>
-                <div className="explane">
-                  <h3>{title}</h3>
-                  <h6>{tag}</h6>
-                  <div className="price">
-                    <h5 className="large">L</h5>
-                    <h5 className="cost">{large}</h5>
-                    <h5 className="large">R</h5>
-                    <h5 className="cost">{large}</h5>
-                  </div>
-                  <div className="metarials">
-                  {metarial.map((item, index) => (
-                    <h6 className="metarial" key={index}>{item}</h6>
-                  ))}
-                  </div>
-                
-                </div>
-                <div className="link">
-                  <div className="goto">
-                    <div className="info"><img src="img/돋보기.png"></img>상세보기</div>
-                    <div className="cart"><img src="img/장바구니.png"></img>장바구니</div>
-                  </div>
-                </div>  
-              </div>
-            ))}
-        </div>
-      </main>             
-      <footer>
-        <Pagination
-          total={totalPosts}
-          limit={limit}
-          page={page}
-          kategorie={kategorie}
-          setPage={setPage}
-        />
-      </footer>
-    </div>
+              </tbody>
+            </table>
+            <label>
+              <select
+                  type="number"
+                  value={kategorie}
+                  onChange={(event) => {
+                    if (selectedCategory === "전체") {
+                      setKategorie(Number(event.target.value));
+                    }
+                  }}
+                  disabled={selectedCategory !== "전체"}
+              >
+                <option value="1">신제품순</option>
+                <option value="2">가격낮은순</option>
+                <option value="3">가격높은순</option>
+              </select>
+            </label>
+            {posts
+                .filter((post) =>
+                    selectedCategory === "전체"
+                        ? true
+                        : post.category === selectedCategory
+                )
+                .slice(offset, offset + limit)
+                .map(({ id, img, title, tag, large, update, category, reguler,metarial }) => (
+                    <div className="pizzaMenu" key={id}>
+                      <img src={img}></img>
+                      <div className="explane">
+                        <h3>{title}</h3>
+                        <h6>{tag}</h6>
+                        <div className="price">
+                          <h5 className="large">L</h5>
+                          <h5 className="cost">{large}</h5>
+                          <h5 className="large">R</h5>
+                          <h5 className="cost">{large}</h5>
+                        </div>
+                        <div className="metarials">
+                          {metarial.map((item, index) => (
+                              <h6 className="metarial" key={index}>{item}</h6>
+                          ))}
+                        </div>
+
+                      </div>
+                      <div className="link">
+                        <div className="goto">
+                          <div className="info"><img src="img/돋보기.png"></img>상세보기</div>
+                          <div className="cart"><img src="img/장바구니.png"></img>장바구니</div>
+                        </div>
+                      </div>
+                    </div>
+                ))}
+          </div>
+        </main>
+        <footer>
+          <Pagination
+              total={totalPosts}
+              limit={limit}
+              page={page}
+              kategorie={kategorie}
+              setPage={setPage}
+          />
+        </footer>
+      </div>
   );
 }
 
 export default Posts;
-=======
-import { useState, useEffect } from "react";
-import styled from "styled-components";
-import Pagination from "./MenuPazination";
-
-function Posts() {
-  const [posts, setPosts] = useState([]);
-  const [limit, setLimit] = useState(10);
-  const [page, setPage] = useState(1);
-  const offset = (page - 1) * limit;
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => res.json())
-      .then((data) => setPosts(data));
-  }, []);
-
-  return (
-    <Layout>
-      <header>
-        <h1>게시물 목록</h1>
-      </header>
-
-      <label>
-        페이지 당 표시할 게시물 수:&nbsp;
-        <select
-          type="number"
-          value={limit}
-          onChange={({ target: { value } }) => setLimit(Number(value))}
-        >
-          <option value="10">10</option>
-          <option value="12">12</option>
-          <option value="20">20</option>
-          <option value="50">50</option>
-          <option value="100">100</option>
-        </select>
-      </label>
-
-      <main>
-        {posts.slice(offset, offset + limit).map(({ id, title, body }) => (
-          <article key={id}>
-            <h3>
-              {id}. {title}
-            </h3>
-            <p>{body}</p>
-          </article>
-        ))}
-      </main>
-
-      <footer>
-        <Pagination
-          total={posts.length}
-          limit={limit}
-          page={page}
-          setPage={setPage}
-        />
-      </footer>
-    </Layout>
-  );
-}
-
-const Layout = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-`;
-
-export default Posts;
->>>>>>> menuPage/master

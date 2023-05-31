@@ -4,12 +4,12 @@
 }
 
 .Layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .container{
   position: relative;
   width: 1200px;
@@ -47,9 +47,9 @@
 
 .kategorie_bar tr {
   text-align: center;
- 
+
   line-height: 68px;
- 
+
 }
 .kategorie_bar tr td{
   width: 20%;
@@ -79,9 +79,9 @@ label select{
   margin: 30px 0 30px 0;
   line-height: 35px;
 
-  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIxMi4xMjUiPjxwYXRoIGQ9Ik0xOC44OC4wMTNMMTAuNSA4LjA1NiAyLjEyLjAxMiAwIDIuMDQ4IDEwLjUgMTIuMTMgMjEgMi4wNDh6IiBmaWxsPSIjMjIyIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=) no-repeat 100%;
-    background-size: 11px 7px;
-    background-position-x: calc(100% - 15px);
+
+  background-size: 11px 7px;
+  background-position-x: calc(100% - 15px);
 }
 
 .pizzaMenu {
@@ -90,23 +90,23 @@ label select{
   justify-content: space-between;
   width: 590px;
   max-height: 240px;
-} 
+}
 
 .pizzaMenu .explane{
   margin-top: 50px;
   min-width: 270px;
   font-size: 30px;
   margin-top: -30px;
-  
+
 }
 .pizzaMenu .explane h3{
- margin-bottom: -30px;
-  
+  margin-bottom: -30px;
+
 }
 .pizzaMenu .explane h6{
   color: grey;
   font-size: 18px;
-  
+
 }
 .pizzaMenu .explane .price{
   display: flex;
@@ -115,12 +115,12 @@ label select{
 }
 .price h5:nth-child(2) {
   margin-right: 20px; /* 원하는 만큼의 간격 설정 */
-  
+
 }
 
 .pizzaMenu .explane .price .large{
   color :#41b6E6;
- 
+
   font-weight: bold;
 }
 .pizzaMenu .explane .price .cost{
@@ -130,7 +130,7 @@ label select{
 .pizzaMenu .explane .metarials{
   display: flex;
   justify-content: space-between;
-  
+
 }
 .pizzaMenu .explane .metarial{
   border: 1px solid #ccc;
@@ -140,13 +140,13 @@ label select{
   margin-top: -30px;
   font-size: 18px;
   font-weight: normal;
- text-align: center;
- line-height: 40px;
+  text-align: center;
+  line-height: 40px;
 }
 .pizzaMenu .img{
   max-width: 276px;
   display: inline-block;
-  
+
 }
 .pizzaMenu:hover .link{
   display: flex;
@@ -159,18 +159,18 @@ label select{
   height: 240px;
   background-color: rgba(0, 0, 0, 0.8);
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 }
 .link img{
   width: 20px;
   height: 20px;
   margin: 16px 0px 16px;
   background-color: transparent;
-  
+
 }
 .link .info{
   justify-content: center;
-  
+
   display: flex;
   background-color: transparent;
   background-color: rgba(0, 0, 0, 0);
@@ -188,7 +188,7 @@ label select{
 }
 .link .cart{
   justify-content: center;
-  
+
   display: flex;
   background-color: transparent;
   background-color: rgba(0, 0, 0, 0);
