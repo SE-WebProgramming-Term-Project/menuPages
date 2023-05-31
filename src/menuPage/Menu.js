@@ -265,10 +265,12 @@ function Posts() {
                       <div className="link">
                         <div className="goto">
                           {/* Add onClick handler to trigger navigation */}
-                          <div className="info" onClick={handleDetailClick}>//TODO 상세정보 선택시 상세정보 페이지로 이동
+                          <div className="info" onClick={handleDetailClick}>
+                            {/*TODO 상세정보 선택시 상세정보 페이지로 이동*/}
                             <img src="img/돋보기.png" alt="상세보기"></img>상세보기
                           </div>
-                          <div className="cart" onClick={handleCartClick}> //TODO 장바구니 선택 시, alt로 장바구니에 담겼습니다. 출력 후 cart에 피자 정보 보내야됨
+                          <div className="cart" onClick={handleCartClick}>
+                            {/*TODO 장바구니 선택 시, alt로 장바구니에 담겼습니다. 출력 후 cart에 피자 정보 보내야됨*/}
                             <img src="img/장바구니.png" alt="장바구니"></img>장바구니
                           </div>
                         </div>
