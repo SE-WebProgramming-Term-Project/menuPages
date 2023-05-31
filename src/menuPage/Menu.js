@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "./MenuPazination";
 import '../css/Menu.css'
+import { useNavigate } from "react-router-dom";
+import Cart from "./Cart";
+import {Routes,Route}from "react-router-dom";
 function Posts() {
   const [posts, setPosts] = useState([]);
   const [limit, setLimit] = useState(2);
@@ -102,6 +105,14 @@ function Posts() {
       "metarial" : ["새우", "치즈", "닭고기"]
     }
   ]
+  const navigate = useNavigate();
+
+  const handleDetailClick = () => {
+    navigate("/Detail");
+  };
+  const handleCartClick = () => {
+    navigate("/cart");
+  };
   useEffect(() => {
     let sortedPosts = [...data];
 
@@ -252,8 +263,13 @@ function Posts() {
                       </div>
                       <div className="link">
                         <div className="goto">
-                          <div className="info"><img src="img/돋보기.png"></img>상세보기</div>
-                          <div className="cart"><img src="img/장바구니.png"></img>장바구니</div>
+                          {/* Add onClick handler to trigger navigation */}
+                          <div className="info" onClick={handleDetailClick}>
+                            <img src="img/돋보기.png" alt="상세보기"></img>상세보기
+                          </div>
+                          <div className="cart" onClick={handleCartClick}>
+                            <img src="img/장바구니.png" alt="장바구니"></img>장바구니
+                          </div>
                         </div>
                       </div>
                     </div>

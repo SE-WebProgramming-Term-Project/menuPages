@@ -1,16 +1,19 @@
-import { createGlobalStyle } from "styled-components";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Posts from "./menuPage/Menu";
+import Cart from "./menuPage/Cart";
+import Detail from "./menuPage/Dtail";
 
 function App() {
-  return (
-    <>
-      <GlobalStyle />
-      <Posts />
-    </>
-  );
+    return (
+        <Routes>
+            <Route path="/" element={<Posts />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/Detail" element={<Detail />} />
+        </Routes>
+    );
 }
 
-const GlobalStyle = createGlobalStyle`
-`;
+
 
 export default App;
