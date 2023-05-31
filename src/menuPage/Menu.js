@@ -178,17 +178,18 @@ function Posts() {
   return (
       <div className="Layout">
         <header>
+          <div className="pc-pizzamenu-top-text">
+            <p className="pizzamenu-top-text-body2">피자</p>
+            <p className="pizzamenu-top-text-footer">
+              맛있고 건강한 피자! 피자알볼로의
+              <font color="#41b6e6">다양한 피자를 주문</font>해 보세요.
+            </p>
+          </div>
         </header>
 
         <main>
           <div className="container">
-            <div class="pc-pizzamenu-top-text">
-              <p class="pizzamenu-top-text-body2">피자</p>
-              <p class="pizzamenu-top-text-footer">
-                맛있고 건강한 피자! 피자알볼로의
-                <font color="#41b6e6">다양한 피자를 주문</font>해 보세요.
-              </p>
-            </div>
+
             <table className="kategorie_bar">
               <tbody>
               <tr>
@@ -264,10 +265,10 @@ function Posts() {
                       <div className="link">
                         <div className="goto">
                           {/* Add onClick handler to trigger navigation */}
-                          <div className="info" onClick={handleDetailClick}>
+                          <div className="info" onClick={handleDetailClick}>//TODO 상세정보 선택시 상세정보 페이지로 이동
                             <img src="img/돋보기.png" alt="상세보기"></img>상세보기
                           </div>
-                          <div className="cart" onClick={handleCartClick}>
+                          <div className="cart" onClick={handleCartClick}> //TODO 장바구니 선택 시, alt로 장바구니에 담겼습니다. 출력 후 cart에 피자 정보 보내야됨
                             <img src="img/장바구니.png" alt="장바구니"></img>장바구니
                           </div>
                         </div>
