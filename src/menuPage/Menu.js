@@ -15,15 +15,21 @@ function Posts() {
   const [totalPosts, setTotalPosts] = useState(0);
   const offset = (page - 1) * limit;
   const navigate = useNavigate();
-
-  const handleDetailClick = () => {
-    navigate("/Detail");
+  const [cartItems, setCartItems] = useState([]);
+  const handleDetailClick = (event) => {
+    if (event.target.className === 'info') { // Assuming 'info' is the class name of the element that should trigger the detail click
+      navigate("/Detail");
+    }
   };
 
-  const handleCartClick = () => {
-    navigate("/cart");
+  const handleGoToCart = () => {
+    navigate("/cart",{ state: cartItems });
   };
 
+  const handleCartClick = (pizza) => {
+    setCartItems((prevItems) => [...prevItems, pizza]);
+    console.log(setCartItems);
+  };
   useEffect(() => {
     axios.get("/json/data.json").then((response) => {
       setPosts(response.data);
@@ -181,7 +187,7 @@ function Posts() {
                           <div className="info">
                             <img src="img/돋보기.png" alt="상세보기"></img>상세보기
                           </div>
-                          <div className="cart" onClick={handleCartClick}>
+                          <div className="cart" onClick={() => handleCartClick({ id, img, title, tag, large, update, category, reguler, metarial })}>
                             <img src="img/장바구니.png" alt="장바구니"></img>장바구니
                           </div>
                         </div>
@@ -198,6 +204,7 @@ function Posts() {
               kategorie={kategorie}
               setPage={setPage}
           />
+          <button onClick={handleGoToCart}>장바구니로 이동</button>
         </footer>
       </div>
   );
